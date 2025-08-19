@@ -35,7 +35,7 @@ const CustomLegend = ({ payload }: any) => {
       {payload?.map((entry: any, index: number) => (
         <div key={index} className="flex items-center space-x-2 text-sm">
           <div className="w-3 h-3 rounded-full" style={{ backgroundColor: entry.color }} />
-          <span className="text-muted-foreground truncate">{entry.value}</span>
+          <span className="text-muted-foreground truncate">{entry.payload?.category || entry.value}</span>
         </div>
       ))}
     </div>
