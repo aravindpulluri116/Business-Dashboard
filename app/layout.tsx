@@ -5,9 +5,9 @@ import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Cyberpunk Dashboard",
+  title: "Business Dashboard",
   description: "Real-time business intelligence dashboard",
-  generator: "v0.app",
+  generator: "aravindpulluri",
 }
 
 export default function RootLayout({
