@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import type { OrderData } from "@/lib/types"
 import { cn } from "@/lib/utils"
+import { formatCurrency } from "@/lib/currency"
 
 interface RecentOrdersProps {
   orders: OrderData[]
@@ -56,7 +57,7 @@ export function RecentOrders({ orders }: RecentOrdersProps) {
                     </div>
                     <div className="text-right">
                       <p className="text-sm font-semibold text-foreground">
-                        ${order.finalAmount?.toFixed(2) || "0.00"}
+                        {formatCurrency(order.finalAmount || 0)}
                       </p>
                       <p className="text-xs text-muted-foreground">{order.date || "No date"}</p>
                     </div>
